@@ -1,0 +1,19 @@
+.container
+{
+    position: relative;
+    width: 100%;
+}
+.navigation
+{
+
+    width: 300px;
+    height: 1000px;
+    background-color: rgb(46, 44, 61);
+}
+.welcome{
+    background-color: cornflowerblue;
+    border: none;
+    color: aliceblue;
+    padding: 20px 90px;
+
+} 

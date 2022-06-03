@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/dashboard/">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+
+        .b-example-divider {
+            height: 3rem;
+            background-color: rgba(0, 0, 0, .1);
+            border: solid rgba(0, 0, 0, .15);
+            border-width: 1px 0;
+            box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+        }
+
+        .b-example-vr {
+            flex-shrink: 0;
+            width: 1.5rem;
+            height: 100vh;
+        }
+
+        .bi {
+            vertical-align: -.125em;
+            fill: currentColor;
+        }
+
+        .nav-scroller {
+            position: relative;
+            z-index: 2;
+            height: 2.75rem;
+            overflow-y: hidden;
+        }
+
+        .nav-scroller .nav {
+            display: flex;
+            flex-wrap: nowrap;
+            padding-bottom: 1rem;
+            margin-top: -1px;
+            overflow-x: auto;
+            text-align: center;
+            white-space: nowrap;
+            -webkit-overflow-scrolling: touch;
+        }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="dashboard.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <header class="navbar navbar-dark sticky-top bg-dark flex-md-nowrap p-0 shadow">
+        <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 fs-6" href="#">Company name</a>
+        <button class="navbar-toggler position-absolute d-md-none collapsed" type="button" data-bs-toggle="collapse"
+            data-bs-target="#sidebarMenu" aria-controls="sidebarMenu" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <input class="form-control form-control-dark w-100 rounded-0 border-0" type="text" placeholder="Search"
+            aria-label="Search">
+        <div class="navbar-nav">
+            <div class="nav-item text-nowrap">
+                <a class="nav-link px-3" href="#">Sign out</a>
+            </div>
+        </div>
+    </header>
+
+    <div class="container-fluid">
+        <div class="row">
+            <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block bg-light sidebar collapse">
+                <div class="position-sticky pt-3">
+                    <ul class="nav flex-column">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="#">
+                                <button type="button" class="btn btn-sm btn-outline-secondary dropdown-toggle">
+                                    <span data-feather="calendar" class="align-text-bottom"></span>
+                                    Quản lí
+                                </button>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/shopingcart.html">
+                                <span data-feather="file" class="align-text-bottom"></span>
+                                Quản lí người dùng
+                            </a>
+                        </li>
+                        </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="shopping-cart" class="align-text-bottom"></span>
+                                Products
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="users" class="align-text-bottom"></span>
+                                Close
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="bar-chart-2" class="align-text-bottom"></span>
+                                Reports
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="layers" class="align-text-bottom"></span>
+                                Integrations
+                            </a>
+                        </li>
+                    </ul>
+
+                    <h6
+                        class="sidebar-heading d-flex justify-content-between align-items-center px-3 mt-4 mb-1 text-muted text-uppercase">
+                        <span>Saved reports</span>
+                        <a class="link-secondary" href="#" aria-label="Add a new report">
+                            <span data-feather="plus-circle" class="align-text-bottom"></span>
+                        </a>
+                    </h6>
+                    <ul class="nav flex-column mb-2">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="file-text" class="align-text-bottom"></span>
+                                Current month
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="file-text" class="align-text-bottom"></span>
+                                Last quarter
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="file-text" class="align-text-bottom"></span>
+                                Social engagement
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="file-text" class="align-text-bottom"></span>
+                                Year-end sale
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="file-text" class="align-text-bottom"></span>
+                                Password
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">
+                                <span data-feather="file-text" class="align-text-bottom"></span>
+                                Settings
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div
+                    class="d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+                </div>
+                <div class="table">
+                    <h2 style="width: 1090px; height: 50px;border-radius: 5px; background-color: cornflowerblue;">Danh
+                        sách người dùng</h2>
+                    <div class="">
+                        <button class="open-modal-btn"
+                            style="border-radius: 5px; margin-left: 900px; border-color: cornflowerblue; background-color: cornflowerblue; color: aliceblue;">
+                            <ion-icon name="add-outline" style="color: aliceblue;">
+                            </ion-icon>Người dùng
+                        </button>
+                        <div class="modal2 hide">
+                            <div class="modal__inner">
+                                <div class="modal__header">
+                                    <p>Thông tin người dùng</p>
+                                    <i class="fa-solid fa-xmark"></i>
+                                </div>
+                                <div class="modal__body">
+                                    <form class="needs-validation" novalidate>
+                                        <div class="row g-3">
+                                            <div class="col-sm-6">
+                                                <label for="firstName" class="form-label">Tên*:</label>
+                                                <input type="text" class="form-control" id="name" placeholder=""
+                                                    value="" required>
+                                                <span id="name-error" class="error"></span>
+                                            </div>
+
+                                            <div class="col-sm-6">
+                                                <label for="lastName" class="form-label">Số điện thoại*:</label>
+                                                <input type="text" class="form-control" id="phone" placeholder=""
+                                                    value="" required>
+                                                <span id="phone-error" class="error"></span>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label for="email" class="form-label">Email <span
+                                                        class="text-muted">(Optional)</span></label>
+                                                <input type="email" class="form-control" id="email"
+                                                    placeholder="example@fpt.com.vn">
+                                                <span id="email-error" class="error"></span>
+                                            </div>
+
+                                            <div class="col-12">
+                                                <label for="address" class="form-label">Địa chỉ chi tiết*:</label>
+                                                <input type="text" class="form-control" id="address"
+                                                    placeholder="1234 Main St" required>
+                                                <span id="address-error" class="error"></span>
+                                            </div>
+
+                                            <div class="col-md-5">
+                                                <label for="country" class="form-label">Tỉnh/Thành phố:</label>
+                                                <select class="form-select" style="width: 190px; " id="country"
+                                                    required>
+                                                    <option value="">Hà Nội</option>
+                                                    <option>Nghệ An</option>
+                                                </select>
+                                                <div class="invalid-feedback">
+                                                    Please select a valid country.
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-4">
+                                                <label for="state" class="form-label">Quận/Huyện:</label>
+                                                <select class="form-select" style="width: 190px;" id="district"
+                                                    required>
+                                                    <option value="">Nam Từ Liêm</option>
+                                                    <option>Cầu Giấy</option>
+                                                    <option>Nghi Lộc</option>
+                                                    <option>Cửa Lò</option>
+                                                </select>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid state.
+                                                </div>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <label for="state" class="form-label">Phường/Xã:</label>
+                                                <select class="form-select" style="width: 190px;" id="wards" required>
+                                                    <option value="">Cầu Diễn</option>
+                                                    <option>Quan Hoa</option>
+                                                    <option>Yên Hòa</option>
+                                                    <option>Phúc Thọ</option>
+                                                </select>
+                                                <div class="invalid-feedback">
+                                                    Please provide a valid state.
+                                                </div>
+                                            </div>
+                                        </div>
+                                </div>
+                                </form>
+                                <div class="modal__footer">
+                                    <button class="btn_add" onclick="addProduct()">Thêm</button>
+                                    <button class="btn_update" onclick="update()">Sửa</button>
+                                    <button class="btn_close">Close</button>
+                                    <button class="btn_clear" onclick="clearForm()">Clear</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="search">
+                    <label>
+                        <input style="width: 300px;" type="text" id="search" oninput="searchUser()"
+                            placeholder="Search email">
+                        <!-- <button class="btn_search" onclick="searchUser()">Tìm Kiếm</button> -->
+                    </label>
+                </div>
+                <table class="table table-striped table-sm" id="testelement">
+                    <thead>
+                        <tr>
+                            <th scope="col">Id</th>
+                            <th scope="col">Tên</th>
+                            <th scope="col">Email</th>
+                            <th scope="col">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1,014</td>
+                            <td>dashboard</td>
+                            <td>illustrative</td>
+                            <td><button class="btn-trash">
+                                    <ion-icon name="trash-outline"></ion-icon>
+                                </button>
+                                <button class="btn-pencil">
+                                    <ion-icon name="pencil-outline"></ion-icon>
+                            </td></button>
+                        </tr>
+                        <tr>
+                            <td>1,015</td>
+                            <td>random</td>
+                            <td>tabular</td>
+                            <td><button class="btn-trash">
+                                    <ion-icon name="trash-outline"></ion-icon>
+                                </button>
+                                <button class="btn-pencil">
+                                    <ion-icon name="pencil-outline"></ion-icon>
+                            </td></button>
+                        </tr>
+                    </tbody>
+                </table>
+                <nav aria-label="Page navigation example">
+                    <ul class="pagination">
+                        <li class="btn_previous"><a class="page-link" href="#">Previous</a></li>
+                        <li class="page-item"><a class="page-link" href="#">1</a></li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="btn_next"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>
+        </div>
+        </main>
+    </div>
+    </div>
+    </div>
+    <script src='https://cdn.jsdelivr.net/g/lodash@4(lodash.min.js+lodash.fp.min.js)'></script>
+    <script src="dashboard.js"></script>
+</body>
+
+</html>
